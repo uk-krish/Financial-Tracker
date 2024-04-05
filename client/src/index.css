@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+  }
+}
+input::-webkit-calendar-picker-indicator {
+  background: url('./assets/calendar.png') no-repeat center center / 20px 20px;
+  width: 20px;
+  height: 20px;
+  color: black;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0b0d10;
+  color: #fff;
+}
+
+/* Login and Signin */
+.bg_login {
+  background: url(./assets/login_bg.jpg) no-repeat center center fixed;
+  background-color: #1b1b1b;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-blend-mode: darken;
+  background-size: cover;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  padding: 30px;
+  background: #171b21;
+}
+
+/* Sidebar */
+.active {
+  z-index: 0;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0px 20px 0px 20px;
+  background-color: #4e73df;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Popup */
+.bg_popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.786);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+
+  z-index: 1000;
+}
+.form {
+  position: relative;
+  width: 400px;
+  height: max-content;
+  padding: 30px;
+  background: #0b0d10;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 30px;
+  background: #0b0d10;
+}
